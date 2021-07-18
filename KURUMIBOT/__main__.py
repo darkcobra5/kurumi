@@ -51,20 +51,20 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
-I am an Anime themed group management bot. I will use my angel Zafkiel and protect your group. You can find my list of available commands with /help.
+Sup? , my name is Sayu! 
+I'm a group management bot. You can find my list of available commands with /help.
 """
 
 HELP_STRINGS = """
 KURUMI is here! 
-I Use My Powers To Help Admins To Manage Their Groups! 
+Hello again here is my available cmds! 
 *Main* commands available :
- • /help: PM's you this message.
- • /help <module name>: PM's you info about that module.
- • /settings:
-   • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
-For all command use / [or](https://telegra.ph/file/b1b545eb4877b012eac82.png) ! 
+ • ➥/help: PM's you this message.
+ • ➥/help <module name>: PM's you info about that module.
+ • ➥/settings:
+    ➛  in PM: will send you your settings for all supported modules.
+    ➛  in a group: will redirect you to pm, with all that chat's settings.
+For all command use / [or]() ! 
 """.format(
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\nKindly use ! for commands if / is not working\n")
@@ -72,8 +72,8 @@ For all command use / [or](https://telegra.ph/file/b1b545eb4877b012eac82.png) !
 TOKISAKI_IMG = "https://telegra.ph/file/99bbcc3b8564804dc2ab0.jpg"
 KURUMI_IMG = "https://telegra.ph/file/e1d87ec2bdac4e3cfe0a4.mp4"
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
-Click here to donate in [Paypal](https://www.paypal.me/zameeljaz)"""
+DONATE_STRING = """Heya, just plant a tree and give water to birds!
+Click here to donate in [Paypal](https://t.me/itz_samrat)"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -191,32 +191,27 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="☑️ Add Kurumi Chan to your group",
+                            text="❂Add Sayu to your group",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
                      [
                          InlineKeyboardButton(
-                             text="🚨 Support 🚨",
-                             url=f"https://t.me/{SUPPORT_CHAT}"),
+                             text="➥Support ",
+                             url=f"https://t.me/SayuSupport"),
                          InlineKeyboardButton(
-                             text="My luv ❤",
-                             url="https://t.me/A_lonelyPerson")
+                             text="Chat group",
+                             url="https://t.me/LEGENDxSENPAI")
                     ], 
                      [
                          InlineKeyboardButton(
-                             text="🔔 Updates of KURUMI 🔔",
-                             url="https://t.me/hiroiscool")
+                             text=" ➛ Updates",
+                             url="https://t.me/SayuUpdates")
                     ], 
-                     [
-                         InlineKeyboardButton(
-                             text="📳 Anime Chat Group 📳",
-                             url="https://t.me/WeebXWorld")
-                    ]]))
+                    
                      
                     
-                  
-                    
+                
     else:
         update.effective_message.reply_video(
                 KURUMI_IMG, caption=f"Zaphkiel!!!!\nI'm here with my Zaphkiel")
